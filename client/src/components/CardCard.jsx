@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons"
 import { Box, Button, Heading, HStack, IconButton, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, 
   ModalFooter, 

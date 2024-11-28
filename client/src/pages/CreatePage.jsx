@@ -1,6 +1,7 @@
 import { Box, Button, Container, Heading, Input, useColorModeValue, useToast, VStack } from "@chakra-ui/react"
 import { useState } from "react"
 import { useCardStore } from "../store/card"
+import { useNavigate } from "react-router-dom"
 
 const CreatePage = () => {
   const [newCard, setNewCard] = useState({
@@ -14,6 +15,9 @@ const CreatePage = () => {
   const toast = useToast()
 
   const { createCard } = useCardStore()
+
+  const navigate = useNavigate()
+
   const handleAddCard = async () => {
     const { success, message } = await createCard(newCard)
     if(!success) {
@@ -34,6 +38,7 @@ const CreatePage = () => {
       })
     }
     setNewCard({ name: '', style: '', type: '', rarity: '', set: '', text: '' })
+    navigate('/')
   }
 
   return (
