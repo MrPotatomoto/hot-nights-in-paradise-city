@@ -28,7 +28,7 @@ const Navbar = () => {
           bgGradient={'linear(to-r, cyan.500, purple.500)'}
           bgClip={'text'}
         >
-          <Link to={'/'}>DBZ Database</Link>
+          <Link to={'/'}>Hot Nights Database</Link>
         </Text>
 
         <HStack spacing={2} alignItems={'center'}>
